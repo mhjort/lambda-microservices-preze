@@ -42,17 +42,16 @@
           <h1>Microservices</h1>
         </section>
         <section>
-          <blockquote>microservices is a software architecture style in which complex applications are composed of small, independent processes...</blockquote>
-          <p><small>From Wikipedia</small></p>
+          <h2>
+            <blockquote>microservices is a software architecture style in which complex applications are composed of small, independent processes...</blockquote>
+          </h4>
+            <p><small>From Wikipedia</small></p>
         </section>
         <section>
           <img src="img/shit.png"/>
         </section>
         <section>
           <img src="img/tradeoffs.png"/>
-        </section>
-        <section>
-          <h1>IMHO: This is a good thing</h1>
         </section>
       </section>
       <section>
@@ -81,14 +80,12 @@
           <img src="img/peak_traffic.png"/>
         </section>
         <section>
-          <h1>FaaS to rescue</h1>
-        </section>
-        <section>
-          <h1>AWS Lambda?!?</h1>
+          <h1>AWS Lambda</h1>
           <img src="img/AWS_Simple_Icons_Compute_AWSLambda.svg"/>
+          <h2>Run an isolated function in the cloud</h2>
         </section>
         <section>
-          <h1>Run an isolated function in the cloud</h1>
+          <img src="img/lambda_config.png"/>
         </section>
         <section>
           <h1>No servers to maintain</h1>
@@ -114,34 +111,56 @@
           <h2>By default 100 concurrent executions per region</h2>
         </section>
         <section>
-          <h1>Solution #1: Make it run < 5 mins</h1>
+          <h1>Solution #1: Make it run in < 5 mins</h1>
         </section>
         <section>
-          <h1>Run things in parallel inside Lambda...</h1>
+          <h1>Parallel internal execution</h1>
+<pre class="clojure"><code data-trim data-noescape>
+(let [results (pmap process-object objects)])
+</code></pre>
         </section>
         <section>
-          <h1>... and split work to multiple Lambdas</h1>
+          <h1>Parallel distributed execution</h1>
+<pre class="clojure"><code data-trim data-noescape>
+(let [results (doall (cp/upmap @lambda-invocation-pool
+                               invoke-lambda
+                               payloads)))])
+</code></pre>
         </section>
         <section>
-          <h1>Solution #2: Keep server awake</h1>
-          <h2>Scheduled events</h2>
+          <h1>Solution #2: Keep function awake</h1>
+        </section>
+        <section>
+          <h2>Scheduled warmup events</h2>
+          <img src="img/warmup.jpg"/>
         </section>
         <section>
           <h1>Solution #3: Use servers when necessary</h1>
+        </section>
+        <section>
           <h2>Less servers instead of serverless</h2>
+          <img src="img/server_and_lambda.jpg"/>
         </section>
         <section>
           <h1>Solution #4: Process bigger batches</h1>
+        </section>
+        <section>
           <h2>Insert into queue & pull batches</h2>
+          <img src="img/batch.jpg"/>
         </section>
       </section>
       <section>
-        <h2>Contacts</h2>
+        <h2>Thanks!</h2>
         <ul>
           <li>github.com/mhjort</li>
           <li><b>#mhjort</b> at clojurians.slack.com</li>
           <li>@mhjort</li>
         </ul>
+        <p>
+          Images from Wikimedia Commons:
+          <ul>
+            <li>By <a href="//commons.wikimedia.org/wiki/User:G%C3%BCrkan_Seng%C3%BCn" class="mw-redirect" title="User:Gürkan Sengün">Gürkan Sengün</a>, <a href="http://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=5926252">Link</a></li>
+          </ul>
       </section>
       </div>
 		</div>
@@ -167,5 +186,4 @@
 			});
 		</script>
 	</body>
-  <!-- By <a href="//commons.wikimedia.org/wiki/User:G%C3%BCrkan_Seng%C3%BCn" class="mw-redirect" title="User:Gürkan Sengün">Gürkan Sengün</a>, <a href="http://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=5926252">Link</a> -->
 </html>
