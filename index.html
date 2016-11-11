@@ -108,40 +108,31 @@
         <section>
           <h1>Function sleeps</h1>
           <img src="img/sleep.jpg"/>
-      </section>
+        </section>
         <section>
           <h1>Concurrency limit</h1>
           <h2>By default 100 concurrent executions per region</h2>
-      </section>
-        <section>
-          <h1>Distributed analytics architecture</h1>
         </section>
         <section>
-          <img src="img/architecture.jpg" height="70%" width="70%"/>
+          <h1>Solution #1: Make it run < 5 mins</h1>
         </section>
         <section>
-          <h1>Server API works better with high volume & low latency case</h1>
+          <h1>Run things in parallel inside Lambda...</h1>
         </section>
         <section>
-          <h1>Event sourcing works only from same region</h1>
+          <h1>... and split work to multiple Lambdas</h1>
         </section>
         <section>
-          <h1>Batching helps with cost efficiency</h1>
+          <h1>Solution #2: Keep server awake</h1>
+          <h2>Scheduled events</h2>
         </section>
         <section>
-          <h1>Simple retry logic</h1>
-          <h4>Retry if batch fails, log if single event fails</h4>
+          <h1>Solution #3: Use servers when necessary</h1>
+          <h2>Less servers instead of serverless</h2>
         </section>
         <section>
-          <h1>Never run over Lambda time limit</h1>
-          <h4>Verify with tests</h4>
-        </section>
-        <section>
-          <h1>More memory<br/>=<br/>More perf<br/>=<br/>often cheaper<h1>
-        </section>
-        <section>
-          <h1>Monitor whole workflow, cycle time matters</h1>
-          <h4>We use scheduled Lambda for this ;)</h4>
+          <h1>Solution #4: Process bigger batches</h1>
+          <h2>Insert into queue & pull batches</h2>
         </section>
       </section>
       <section>
