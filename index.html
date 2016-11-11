@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Case Adtile: How to build an AWS Lambda based architecture?</title>
+		<title>Microservices with AWS Lambda</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/night.css">
@@ -34,21 +34,41 @@
         </p>
       </section>
       <section>
+        <h2>Karaokeravintola Las Palmas</h2>
+        <img src="img/laspalmas.jpg"/>
+      </section>
+      <section>
         <section>
-          <h1>AWS Lambda?!?</h1>
-          <img src="img/AWS_Simple_Icons_Compute_AWSLambda.svg"/>
+          <h1>Microservices</h1>
         </section>
         <section>
-          <h1>Run an isolated function in the cloud</h1>
+          <blockquote>microservices is a software architecture style in which complex applications are composed of small, independent processes...</blockquote>
+          <p><small>From Wikipedia</small></p>
         </section>
         <section>
-          <h1>Synchronous calls via API Gateway...</h1>
+          <img src="img/shit.png"/>
         </section>
         <section>
-          <h1>...or triggered via events from other AWS services</h1>
+          <img src="img/tradeoffs.png"/>
         </section>
         <section>
-          <h1>No fixed costs</h1>
+          <h1>IMHO: This is a good thing</h1>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h1>Operational complexity</h1>
+        </section>
+        <section>
+          <h1>200 Virtual Machines?!?</h1>
+          <img src="img/yle.jpg"/>
+        </section>
+        <section>
+          <h1>Maintenance problem</h1>
+        </section>
+        <section>
+          <h1>Financial problem</h1>
+          <h2>Fixed costs</h2>
         </section>
       </section>
       <section>
@@ -57,17 +77,42 @@
           <img src="img/motion_ads.png"/>
         </section>
         <section>
-          <h1>Real time analytics</h1>
-        </section>
-        <section>
-          <h1>Customers all around the world</h1>
-        </section>
-        <section>
           <h1>Peak traffic</h1>
           <img src="img/peak_traffic.png"/>
         </section>
+        <section>
+          <h1>FaaS to rescue</h1>
+        </section>
+        <section>
+          <h1>AWS Lambda?!?</h1>
+          <img src="img/AWS_Simple_Icons_Compute_AWSLambda.svg"/>
+        </section>
+        <section>
+          <h1>Run an isolated function in the cloud</h1>
+        </section>
+        <section>
+          <h1>No servers to maintain</h1>
+        </section>
+        <section>
+          <h1>No fixed costs</h1>
+        </section>
       </section>
       <section>
+        <section>
+          <h1>Limitations & solutions</h1>
+        </section>
+        <section>
+          <h1>Hard max time limit</h1>
+          <h2>5 minutes</h2>
+        </section>
+        <section>
+          <h1>Function sleeps</h1>
+          <img src="img/sleep.jpg"/>
+      </section>
+        <section>
+          <h1>Concurrency limit</h1>
+          <h2>By default 100 concurrent executions per region</h2>
+      </section>
         <section>
           <h1>Distributed analytics architecture</h1>
         </section>
@@ -131,4 +176,5 @@
 			});
 		</script>
 	</body>
+  <!-- By <a href="//commons.wikimedia.org/wiki/User:G%C3%BCrkan_Seng%C3%BCn" class="mw-redirect" title="User:Gürkan Sengün">Gürkan Sengün</a>, <a href="http://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=5926252">Link</a> -->
 </html>
